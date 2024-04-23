@@ -1,0 +1,8 @@
+section.hide {
+  display: none;
+  background-color: red;
+}
+
+.project-details, .personal-details, .submit-form {
+  border: 1px solid #ccc;
+}/*# sourceMappingURL=styles.css.map */

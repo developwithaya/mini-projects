@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--  Here we want to create a multi step login form. -->
+    <!-- We will have to versions of the for: -->
+    <!-- 1. A static one made with pure css, js and html -->
+    <!-- 2. A dynamic one made with js(ejs), express, node, css and html. -->
+    <!-- The first step will have personal information section. -->
+    <!-- The second page will collect the project expectations and project type. -->
+    <!-- The third step will contain project details and attachments.  -->
+
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Create a project</h1>
+            </div>
+            <form action="/submit" method="post" class="form-main">
+                <section class="form-progress">
+                    <div class="steps">
+                        <div class="step1">Personal Information</div>
+                        <div class="step2">Project Details</div>
+                        <div class="step2">Submit Form</div>
+                    </div>
+                    <h2 class="form-heading">Let's get started</h2>
+                </section>
+
+                <section class="form-data">
+                    <section class="personal-details">
+                        <div class="name-field">
+                            <div class="form-field">
+                                <label for="firstname">First Name</label>
+                                <input required type="text" class="form-input" id="firstname" name="firstname">
+                            </div>
+    
+                            <div class="form-field">
+                                <label for="lastname">Last Name</label>
+                                <input required type="text" class="form-input" id="lastname" name="lastname">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email Address</label>
+                            <input required type="email" class="form-input" id="email" name="email">
+                        </div>
+                        <div class="form-field">
+                            <label for="company">Company Name</label>
+                            <input required type="text" class="form-input">
+                        </div>
+                    </section>
+
+                    <section class="project-details hide">
+                        <div class="form-field">
+                            <label for="startdate">Start Date</label>
+                            <input required type="text" class="form-input" id="startdate" name="startdate">
+                        </div>
+
+                        <div class="budget-field">
+                            <div class="form-field">
+                                <span class="currency">R</span>
+                                <input required type="text" class="form-input" id="minbudget" name="minbudget">
+                            </div>
+
+                            <div class="form-field">
+                                <span class="currency">R</span>
+                                <input required type="text" class="form-input" id="maxbudget" name="maxbudget">
+                            </div>
+                        </div>
+
+                        <div class="project-types">
+                            <div class="project-type form-field">
+                                <label for="website">Website</label>
+                                <input type="radio" name="website" id="website">
+                            </div>
+                            <div class="project-type form-field">
+                                <label for="ecommerce">eCommerce</label>
+                                <input type="radio" name="ecommerce" id="ecommerce">
+                            </div>
+                            <div class="project-type form-field">
+                                <label for="content">Content Writing</label>
+                                <input type="radio" name="content" id="content">
+                            </div>
+                            <div class="project-type form-field">
+                                <label for="seo">SEO</label>
+                                <input type="radio" name="seo" id="seo">
+                            </div>
+                            <div class="project-type form-field">
+                                <label for="hosting">Web Hosting</label>
+                                <input type="radio" name="hosting" id="hosting">
+                            </div>
+                            <div class="project-type form-field">
+                                <label for="photography">Photography</label>
+                                <input type="radio" name="photography" id="photography">
+                            </div>
+                            <div class="project-type form-field">
+                                <label for="all">All services</label>
+                                <input type="radio" name="all" id="all  ">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="submit-form">
+
+                    </section>
+
+                    <section class="submit-form hide">
+                        <div class="form-field">
+                            <label for="description">Project Description</label>
+                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Please provide a brief summary of your project"></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="attachment">Attach a project brief</label>
+                            <input type="file" name="attachment" id="attachment">
+                        </div>
+                    </section>
+
+                    
+                </section>
+
+                <button class="submit-btn btn" type="submit">Next Step</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
